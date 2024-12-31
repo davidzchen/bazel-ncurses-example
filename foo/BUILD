@@ -5,6 +5,7 @@ cc_library(
     srcs = ["color.cc"],
     hdrs = ["color.h"],
     deps = [
+        "@ncurses//:ncurses_headers",
         "@ncurses",
     ],
 )
