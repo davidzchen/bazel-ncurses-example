@@ -1,6 +1,6 @@
 #include "foo/color.h"
 
-#include "ncurses.h"
+#include <curses.h>
 
 namespace foo {
 
