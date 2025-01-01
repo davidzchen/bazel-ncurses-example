@@ -22,8 +22,8 @@ auto main(int argc, char **argv) -> int {
 
   WINDOW *stdwin = stdscr;
   wrefresh(stdwin);
-  refresh();
-  box(stdwin, 0, 0);
+  wrefresh(stdscr);
+  wborder(stdwin, 0, 0, 0, 0, 0, 0, 0, 0);
   wprintw(stdwin, "Hello World");
 
   return EXIT_SUCCESS;
