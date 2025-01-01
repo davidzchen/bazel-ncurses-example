@@ -2,12 +2,16 @@
 
 #include <clocale>
 #include <cstdlib>
+#include <iostream>
 
 #include "foo/color.h"
 
 auto main(int argc, char **argv) -> int {
+  std::cerr << "00\n";
   setlocale(LC_ALL, "");
+  std::cerr << "11\n";
   initscr();
+  std::cerr << "22\n";
   noecho();
   curs_set(0);
 
