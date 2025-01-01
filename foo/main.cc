@@ -26,5 +26,8 @@ auto main(int argc, char **argv) -> int {
   wborder(stdwin, 0, 0, 0, 0, 0, 0, 0, 0);
   wprintw(stdwin, "Hello World");
 
+  getch();
+  endwin();
+
   return EXIT_SUCCESS;
 }
