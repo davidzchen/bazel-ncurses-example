@@ -3,7 +3,7 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 def _ncurses_repository_impl(_ctx):
     http_archive(
         name = "ncurses",
-        build_file_content = "//third_party/ncurses:ncurses.BUILD",
+        build_file = "//third_party/ncurses:ncurses.BUILD",
         #patch_args = ["-p1"],
         patches = [
             "//third_party/ncurses/patches:change_mode.patch",

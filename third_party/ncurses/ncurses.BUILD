@@ -14,8 +14,8 @@
 
 # The ncurses C library and unit test.
 
-load("//bazel:automake_substitution.bzl", "automake_substitution")
-load("//bazel:pseudo_configure.bzl", "pseudo_configure")
+load("@//bazel:automake_substitution.bzl", "automake_substitution")
+load("@//bazel:pseudo_configure.bzl", "pseudo_configure")
 
 package(default_visibility = ["//visibility:public"])
 
