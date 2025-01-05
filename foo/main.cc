@@ -24,7 +24,7 @@ auto main(int argc, char **argv) -> int {
   wrefresh(stdwin);
   wrefresh(stdscr);
   wborder(stdwin, 0, 0, 0, 0, 0, 0, 0, 0);
-  wprintw(stdwin, "Hello World ███");
+  wprintw(stdwin, "Hello World █");
 
   getch();
   endwin();
