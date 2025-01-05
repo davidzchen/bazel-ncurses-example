@@ -1,6 +1,7 @@
 module(name = "bazel-ncurses-example")
 
-local_path_override(
-    module_name = "ncurses",
-    path = "third_party/ncurses",
+ncurses_repository = use_extension(
+    "//third_party/ncurses:deps.bzl",
+    "ncurses_repository",
 )
+use_repo(ncurses_repository, "ncurses")

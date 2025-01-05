@@ -1,13 +1,13 @@
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
-def _deps(_ctx):
+def _ncurses_repository_impl(_ctx):
     http_archive(
-        name = "upstream",
-        build_file_content = "//:ncurses.BUILD",
+        name = "ncurses",
+        build_file_content = "//third_party/ncurses:ncurses.BUILD",
         #patch_args = ["-p1"],
         patches = [
-            "//:patches/change_mode.patch",
-            "//:patches/fail_on_error.patch",
+            "//third_party/ncurses/patches:change_mode.patch",
+            "//third_party/ncurses/patches:fail_on_error.patch",
         ],
         sha256 = "39893846139518e6c2d00ac1d354d4889f0f394acd44885d70b14eaef4e23e8e",
         strip_prefix = "ncurses-6.4",
@@ -16,4 +16,4 @@ def _deps(_ctx):
         ],
     )
 
-deps = module_extension(implementation = _deps)
+ncurses_repository = module_extension(implementation = _ncurses_repository_impl)
