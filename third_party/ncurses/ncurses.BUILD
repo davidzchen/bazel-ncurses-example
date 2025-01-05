@@ -544,6 +544,11 @@ pseudo_configure(
         "HAVE_CURSES_DATA_BOOLNAMES",
         "NCURSES_WIDECHAR",
         "USE_WIDEC_SUPPORT",
+        "HAVE_WCHAR_H",
+        "NEED_WCHAR_H",
+        "HAVE_MBRLEN",
+        "HAVE_MBRTOWC",
+        "HAVE_MBTOWC",
     ],
     mappings = {
         "NC_CONFIG_H": "",
@@ -563,6 +568,6 @@ pseudo_configure(
         "USE_OPENPTY_HEADER": "<pty.h>",
         "NCURSES_PATHSEP": "0x3a",
         "NCURSES_VERSION_STRING": '"6.4.20221231"',
-        "mbstate_t": "int",
+        "SIZEOF_WCHAR_T": "4",
     },
 )
