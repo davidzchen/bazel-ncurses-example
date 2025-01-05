@@ -542,6 +542,8 @@ pseudo_configure(
         "HAVE_LIBFORM",
         "NCURSES_OSPEED_COMPAT",
         "HAVE_CURSES_DATA_BOOLNAMES",
+        "NCURSES_WIDECHAR",
+        "USE_WIDEC_SUPPORT",
     ],
     mappings = {
         "NC_CONFIG_H": "",
